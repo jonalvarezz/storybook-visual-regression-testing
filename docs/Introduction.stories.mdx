@@ -1,12 +1,12 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-import Code from './assets/code-brackets.svg';
-import Colors from './assets/colors.svg';
-import Comments from './assets/comments.svg';
-import Direction from './assets/direction.svg';
-import Flow from './assets/flow.svg';
-import Plugin from './assets/plugin.svg';
-import Repo from './assets/repo.svg';
-import StackAlt from './assets/stackalt.svg';
+import { Meta } from '@storybook/addon-docs/blocks'
+import Code from './assets/code-brackets.svg'
+import Colors from './assets/colors.svg'
+import Comments from './assets/comments.svg'
+import Direction from './assets/direction.svg'
+import Flow from './assets/flow.svg'
+import Plugin from './assets/plugin.svg'
+import Repo from './assets/repo.svg'
+import StackAlt from './assets/stackalt.svg'
 
 <Meta title="Example/Introduction" />
 
@@ -73,7 +73,7 @@ import StackAlt from './assets/stackalt.svg';
     display: block;
     margin-bottom: 2px;
   }
-  
+
   .link-item img {
     height: 40px;
     width: 40px;
@@ -111,7 +111,7 @@ import StackAlt from './assets/stackalt.svg';
     display: inline-block;
   }
 
-  
+
 `}</style>
 
 # Welcome to Storybook
@@ -128,17 +128,6 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
 <div className="link-list">
   <a
     className="link-item"
-    href="https://storybook.js.org/docs/react/addons/addon-types"
-    target="_blank"
-  >
-    <img src={Plugin} alt="plugin" />
-    <span>
-      <strong>Presets for popular tools</strong>
-      Easy setup for TypeScript, SCSS and more.
-    </span>
-  </a>
-  <a
-    className="link-item"
     href="https://storybook.js.org/docs/react/configure/webpack"
     target="_blank"
   >
@@ -150,13 +139,13 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
   </a>
   <a
     className="link-item"
-    href="https://storybook.js.org/docs/react/configure/styling-and-css"
+    href="https://storybook.js.org/docs/react/addons/addon-types"
     target="_blank"
   >
-    <img src={Colors} alt="colors" />
+    <img src={Plugin} alt="plugin" />
     <span>
-      <strong>Styling</strong>
-      How to load and configure CSS libraries
+      <strong>Presets for popular tools</strong>
+      Easy setup for TypeScript, SCSS and more.
     </span>
   </a>
   <a
@@ -168,6 +157,17 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
     <span>
       <strong>Data</strong>
       Providers and mocking for data libraries
+    </span>
+  </a>
+  <a
+    className="link-item"
+    href="https://storybook.js.org/docs/react/configure/styling-and-css"
+    target="_blank"
+  >
+    <img src={Colors} alt="colors" />
+    <span>
+      <strong>Styling</strong>
+      How to load and configure CSS libraries
     </span>
   </a>
 </div>
@@ -182,14 +182,22 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
       Configure, customize, and extend
     </span>
   </a>
-  <a className="link-item" href="https://storybook.js.org/tutorials/" target="_blank">
+  <a
+    className="link-item"
+    href="https://storybook.js.org/tutorials/"
+    target="_blank"
+  >
     <img src={Direction} alt="direction" />
     <span>
       <strong>In-depth guides</strong>
       Best practices from leading teams
     </span>
   </a>
-  <a className="link-item" href="https://github.com/storybookjs/storybook" target="_blank">
+  <a
+    className="link-item"
+    href="https://github.com/storybookjs/storybook"
+    target="_blank"
+  >
     <img src={Code} alt="code" />
     <span>
       <strong>GitHub project</strong>
