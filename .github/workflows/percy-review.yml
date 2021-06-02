@@ -1,0 +1,24 @@
+name: Percy Snapshopts
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Percy snapshopts
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: yarn snapshopt
