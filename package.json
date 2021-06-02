@@ -1,12 +1,11 @@
 {
-  "name": "visual-regression-testing",
+  "name": "storybook-visual-regression-testing",
   "version": "0.1.0",
   "description": "Proof of concept project with Storybook + Material UI + TypeScript",
   "private": true,
   "scripts": {
-    "start": "yarn storybook",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook"
   },
   "keywords": [],
   "author": "@jonalvarezz",
