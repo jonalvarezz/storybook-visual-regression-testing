@@ -3,6 +3,11 @@ name: Percy Snapshots
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
+  # Percy will auto-approve these:
+  push:
+    branches:
+      - main
+      - deploy/*
 
 jobs:
   snapshot:
