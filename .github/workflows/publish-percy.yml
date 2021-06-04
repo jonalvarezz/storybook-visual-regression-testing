@@ -1,16 +1,16 @@
 name: Percy
 
 on:
+  # We don't want every branch to be reviewed but Pull Requests ones
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
-  # Percy will auto-approve these:
+  # Plus, our base branches – Percy will auto-approve these:
   push:
     branches:
       - main
       - deploy/*
 
 jobs:
-  upload_snapshot:
+  publish-snapshots:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Percy snapshots
+      - name: Publish to Percy
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: yarn snapshot
+        run: yarn publish:percy

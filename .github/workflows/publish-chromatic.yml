@@ -1,0 +1,35 @@
+name: Chromatic
+
+on:
+  # We don't want every branch to be reviewed but Pull Requests ones
+  pull_request:
+  # Plus, our base branches
+  push:
+    branches:
+      - main
+      - deploy/*
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitZeroOnChanges: true
+          buildScriptName: build
+          autoAcceptChanges: main
