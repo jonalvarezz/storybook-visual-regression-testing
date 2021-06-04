@@ -6,7 +6,8 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook",
-    "snapshot": "yarn build && percy-storybook --widths=320,1280 --build_dir=storybook-static"
+    "publish:percy": "yarn build && percy-storybook --widths=320,1280 --build_dir=storybook-static",
+    "publish:chromatic": "chromatic --exit-zero-on-changes"
   },
   "keywords": [],
   "author": "@jonalvarezz",
@@ -37,6 +38,7 @@
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/react": "^6.2.9",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "chromatic": "^5.9.0"
   }
 }
