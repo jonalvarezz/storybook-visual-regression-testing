@@ -26,4 +26,4 @@ jobs:
       - name: Publish to Percy
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: yarn snapshot
+        run: yarn publish:percy
